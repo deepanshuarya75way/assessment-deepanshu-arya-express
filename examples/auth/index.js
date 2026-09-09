@@ -13,6 +13,8 @@ var app = module.exports = express();
 
 // config
 
+//auto push
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
