@@ -92,4 +92,4 @@ describe('utils.flatten(arr)', function(){
     utils.flatten(arr)
       .should.eql(['one', 'two', 'three', 'four', 'five']);
   })
-})
+}) // all done
