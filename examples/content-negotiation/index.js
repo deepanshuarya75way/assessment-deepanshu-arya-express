@@ -24,6 +24,32 @@ app.get('/', function(req, res){
   });
 });
 
+
+
+Hello
+
+
+app.get('/yest', function(req, res){
+  res.format({
+    html: function(){
+      res.send('<ul>' + users.map(function(user){
+        return '<li>' + user.name + '</li>';
+      }).join('') + '</ul>');
+    },
+
+    text: function(){
+      res.send(users.map(function(user){
+        return ' - ' + user.name + '\n';
+      }).join(''));
+    },
+
+    json: function(){
+      res.json(users);
+    }
+  });
+});
+
+
 // or you could write a tiny middleware like
 // this to add a layer of abstraction
 // and make things a bit more declarative:
